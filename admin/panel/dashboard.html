@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>RedSoup Dashboard</title>
   <style>
     body {
@@ -11,13 +11,47 @@
       text-align: center;
       margin-top: 100px;
     }
+    input {
+      padding: 10px;
+      font-family: monospace;
+      background: #222;
+      color: #fff;
+      border: 1px solid tomato;
+    }
+    button {
+      padding: 10px;
+      background-color: tomato;
+      color: #111;
+      border: none;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+    .result {
+      margin-top: 30px;
+      font-size: 1.2em;
+    }
   </style>
 </head>
 <body>
   <h1>Tomato is always right.</h1>
-  <p>You have been chosen as the next heir.</p>
-  <p>All access is now permitted.</p>
-  <!-- hint: /admin/vault/key1.txt -->
+  <p>You may now enter the truth.</p>
 
+  <input id="tokenInput" placeholder="Enter the Red Token">
+  <button onclick="checkToken()">Access</button>
+
+  <div id="result" class="result"></div>
+
+  <script>
+    function checkToken() {
+      const input = document.getElementById('tokenInput').value.trim();
+      const result = document.getElementById('result');
+
+      if (input === "RedSecRET") {
+        result.innerHTML = "<strong>FLAG:</strong> ptg_student";
+      } else {
+        result.innerText = "Access Denied.";
+      }
+    }
+  </script>
 </body>
 </html>
