@@ -1,0 +1,2 @@
+VGhlIHNlZWQgaXMgc3RpbGwgcmVkLiBMaXN0ZW4gdG8gdGhlIGNvbmZpZw==
+# base64 → The seed is still red. Listen to the config
